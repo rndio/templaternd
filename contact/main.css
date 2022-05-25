@@ -1,0 +1,144 @@
+form[name="contactForm"] div.headerForm.checked {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#awn-toast-container,
+#awn-popup-wrapper,
+form[name="contactForm"] div.footerForm button {
+    font-family: 'Segoe UI', 'Helvetica Neue', Roboto, sans-serif
+}
+
+#awn-toast-container .awn-toast-icon>div {
+    height: 48px;
+    width: 48px;
+    margin-right: 16px
+}
+
+#awn-toast-container .awn-toast-icon>div>svg {
+    width: unset;
+    height: unset;
+    vertical-align: unset;
+    fill: currentColor
+}
+
+form[name="contactForm"] div.footerForm button {
+    border: 1px solid #48B2E6;
+    background-color: #48B2E6;
+    color: white;
+    padding: 12px 16px;
+    font-size: 14px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    transition: all .20s ease-in-out
+}
+
+form[name="contactForm"] div.footerForm button:hover {
+    background-color: #007bff;
+    cursor: pointer
+}
+
+form[name="contactForm"] .headerForm {
+    display: flex;
+    transition: .5s;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    margin-bottom: .5rem
+}
+
+form[name="contactForm"] input[name="name"] {
+    width: 49%
+}
+
+form[name="contactForm"] input[name="email"] {
+    width: 49%
+}
+
+form[name="contactForm"] textarea[name="message"] {
+    resize: vertical
+}
+
+form[name="contactForm"] input[name="url"],
+input[name="message"] {
+    display: none
+}
+
+form[name="contactForm"] .footerForm {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    margin-top: .5rem
+}
+
+.awn-popup-response{
+    padding: 0!important;
+}
+
+.awn-popup-response .header{
+    padding: 22px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.awn-popup-response .header>*{
+    margin: 0;
+}
+
+.awn-popup-response .main{
+    scrollbar-width: thin;
+    padding-top: 16px;
+    overflow: auto;
+    width: 100%;
+    max-height: 70%;
+}
+
+.awn-popup-response .main::-webkit-scrollbar {
+    width: 10px;
+}
+
+.awn-popup-response .main::-webkit-scrollbar-track {
+    background-color: whitesmoke;
+}
+
+.awn-popup-response .main::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,0.4);
+}
+
+.awn-popup-response .response-wrapper{
+    display: flex;
+    padding: 0 24px 0 24px;
+}
+
+.awn-popup-response .response-wrapper>img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.awn-popup-response .response-wrapper .response-content{
+    margin-left: .8rem;
+}
+
+.awn-popup-response .response-wrapper .response-content>.response-meta{
+    font-size: small;
+}
+
+.awn-popup-response .response-wrapper .response-content>.response-meta::before{
+    font-weight: 500;
+    content: attr(data-name);
+    margin-right: 5px;
+}
+.awn-popup-response .response-wrapper .response-content>.response-meta::after{
+    font-style: italic;
+    font-weight: 400;
+    content: attr(data-date);
+    margin-left: 5px;
+}
+
+.awn-popup-response .response-wrapper .response-content>p{
+    font-size: small;
+    margin-top: .5em;
+    margin-bottom: 1.5rem;
+}
