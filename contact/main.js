@@ -77,17 +77,28 @@ window.onload = function () {
                         responseElement += `<img src="https://secure.gravatar.com/avatar/${MD5(resp.data[i]['email'])}?s=40&d=mp&r=g" alt="Avatar">`;
                         responseElement += `<div class="response-content"><span class="response-meta" data-name="${resp.data[i]['name']}" data-date="${resp.data[i]['timestamp']}">·</span>`;
                         responseElement += `<p>${resp.data[i]['message']}</p>`;
+
+                        if (resp.data[i].hasOwnProperty('response')) {
+                            responseElement += `<div class="response-wrapper">`;
+                            responseElement += `<img src="https://avatars.githubusercontent.com/u/40624866?s=40&v=4" alt="Avatar">`;
+                            responseElement += `<div class="response-content"><span class="response-meta" data-name="Rendio Simamora" data-date=""><i class="ri-checkbox-circle-fill"></i></span>`;
+                            responseElement += `<p>${resp.data[i]['response']}</p>`;
+                            responseElement += `</div></div>`;
+                        }
+
                         responseElement += `</div></div>`;
                     }
 
                     // Show Modal
-                    globalAWN.modal(`<div class="header"><h2>Contact Response</h2></div><div class="main">${responseElement}</div>`, 'response')
+                    globalAWN.modal(`<div class="header"><h4>Contact Response</h4></div><div class="main">${responseElement}</div>`, 'response')
                 },
                 resp => { globalAWN.alert("Something Happened, Please Try Again Later") }
             )
         } else {
             // Show Modal
-            globalAWN.modal(`<div class="header"><h2>Contact Response</h2></div><div class="main">${responseElement}</div>`, 'response')
+            globalAWN.modal(`<div class="header"><h4>Contact Response</h4></div><div class="main">${responseElement}</div>`, 'response')
         }
     }
 }
+
+
