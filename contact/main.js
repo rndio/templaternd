@@ -16,7 +16,7 @@ ready(function () {
     chkBoxAnonymous = document.getElementById("njoKvblBE"),
     responseBtn = document.getElementById('responseButton');
 
-    chkBoxAnonymous.addEventListener('click', e => {
+    chkBoxAnonymous.onclick = function () {
         this.value = this.value == 0 ? 1 : 0;
         if (this.value == true) {
             nameNemail.classList.toggle("anonymous");
@@ -31,7 +31,7 @@ ready(function () {
             form.name.value = "";
             form.email.value = "";
         }
-    });
+    }
 
     form.addEventListener('submit', e => {
         document.contactForm.url.value = window.location.href;
